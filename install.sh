@@ -13,4 +13,4 @@ fi
 ln -s $HOME/.tmux/tmux.conf $HOME/.tmux.conf
 cd $HOME/.tmux/tmux-powerline
 sh generate_rc.sh
-cp ./.tmux-powerlinerc.default $HOME/.tmux-powerlinerc
+mv $HOME/.tmux-powerlinerc.default $HOME/.tmux-powerlinerc
