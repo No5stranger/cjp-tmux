@@ -9,7 +9,6 @@ if [ -f $HOME/.tmux-powerlinerc ]
 then
     mv $HOME/.tmux-powerlinerc $HOME/.tmux-powerlinerc.bak
 fi
+cp $HOME/.tmux/cjp.sh $HOME/.tmux/tmux-powerline/themes/cjp.sh
 ln -s $HOME/.tmux/tmux.conf $HOME/.tmux.conf
-cd $HOME/.tmux/tmux-powerline
-sh generate_rc.sh
-mv $HOME/.tmux-powerlinerc.default $HOME/.tmux-powerlinerc
+ln -s $HOME/.tmux/tmux-powerlinerc $HOME/.tmux-powerlinerc

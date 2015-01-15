@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+echo '>--------- tar file ---------<'
+cd ./source_code
+tar zxf libevent-2.0.21-stable.tar.gz
+tar zxf tmux-1.9a.tar.gz
+# install libevent
+echo '>--------- install libevent ---------<'
+cd libevent-2.0.21-stable
+./configure
+make
+sudo make install
+# link file
+echo '>--------- link libevent module ---------<'
+sudo ln -s /usr/local/lib/libevent-2.0.so.5 /usr/lib/libevent-2.0.so.5
+sudo ln -s /usr/local/lib/libevent-2.0.so.5 /usr/lib64/libevent-2.0.so.5
+# install tmux
+echo '>--------- install tmux ---------<'
+cd ../tmux-1.9a
+./configure
+make
+sudo make install
+# clean file
+echo '>--------- clean file ---------<'
+cd ../
+rm -rf libevent-2.0.21-stable
+rm -rf tmux-1.9a
